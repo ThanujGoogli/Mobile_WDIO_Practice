@@ -8,7 +8,9 @@
     "@wdio/mocha-framework": "^10.1.0",
     "@wdio/spec-reporter": "^10.1.0",
     "appium": "^3.9.0",
-    "appium-uiautomator2-driver": "^8.7.3"
+    "appium-uiautomator2-driver": "^8.7.3",
+    "eslint": "^10.15.0",
+    "eslint-plugin-wdio": "^10.1.0"
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js"
