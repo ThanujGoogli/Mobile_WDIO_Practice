@@ -22,7 +22,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/android/add-note-screen.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -56,7 +56,8 @@ export const config = {
     'appium:deviceName': 'Android_17',
     'appium:automationName': 'UiAutomator2',
     'appium:platformVersion': '17',
-    'appium:app': 'D:/Thanuj/Notes/WebDriverIO/WeDriverIO_Practise/app/android/ApiDemos-debug.apk',
+    // 'appium:app': 'D:/Thanuj/Notes/WebDriverIO/WeDriverIO_Practise/app/android/ApiDemos-debug.apk',
+    'appium:app': 'D:/Thanuj/Notes/WebDriverIO/WeDriverIO_Practise/app/android/ColorNote_Notepad.apk',
     'appium:autoGrantPermissions': true,
     'appium:noReset': false,
     'appium:newCommandTimeout': 120
