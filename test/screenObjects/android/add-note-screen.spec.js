@@ -1,4 +1,4 @@
-import AddNoteScreen from './screenobjects/android/add-note-screen.js'
+import AddNoteScreen from './add-note-screen.js'
 describe('Add Notes',()=>{
 
     it('Skip tutorial',async()=>{
@@ -30,10 +30,7 @@ describe('Add Notes',()=>{
     it.skip('Delete Note and Verify it in Thrash',async()=>{
 
         //Steps to add a note
-        await $('//android.widget.Button[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/btn_start_skip"]').click()
-        await $('//*[@text="Add note"]').click();
-        await $('//*[@text="Text"]').click();
-        await expect($('//*[@text="Editing"]')).toBeDisplayed();
+        await AddNoteScreen.saveNote();
         const noteTitle = await $('//android.widget.EditText[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_title"]')
         await noteTitle.addValue('Fav anime list');
         await driver.back();

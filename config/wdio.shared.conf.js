@@ -21,9 +21,6 @@ export const config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: [
-        './test/specs/android/add-note-screen.spec.js'
-    ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -50,18 +47,6 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-    'appium:deviceName': 'Android_17',
-    'appium:automationName': 'UiAutomator2',
-    'appium:platformVersion': '17',
-    // 'appium:app': 'D:/Thanuj/Notes/WebDriverIO/WeDriverIO_Practise/app/android/ApiDemos-debug.apk',
-    'appium:app': 'D:/Thanuj/Notes/WebDriverIO/WeDriverIO_Practise/app/android/ColorNote_Notepad.apk',
-    'appium:autoGrantPermissions': true,
-    'appium:noReset': false,
-    'appium:newCommandTimeout': 120
-    }],
 
     //
     // ===================
@@ -106,11 +91,7 @@ export const config = {
     // Default request retries count
     connectionRetryCount: 3,
     //
-    // Test runner services
-    // Services take over a specific job you don't want to take care of. They enhance
-    // your test setup with almost no effort. Unlike plugins, they don't add new
-    // commands. Instead, they hook themselves up into the test process.
-    services: ['appium'],
+    
     //
     // The DevTools service shows a live dashboard of your run and can record a
     // replayable trace of every test. Install @wdio/devtools-service, then add
