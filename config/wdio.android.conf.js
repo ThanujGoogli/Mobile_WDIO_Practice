@@ -20,7 +20,7 @@ export const config = {
         'appium:automationName': 'UiAutomator2',
         'appium:platformVersion': '17',
 
-        'appium:app': path.resolve('/app/android/ColorNote_Notepad.apk'),
+        'appium:app': 'D:/Thanuj/Notes/WebDriverIO/WeDriverIO_Practise/app/android/ColorNote_Notepad.apk',
 
         'appium:autoGrantPermissions': true,
         'appium:noReset': false,
