@@ -10,7 +10,7 @@ export const config = {
 
     // Specs
     specs: [
-        '../test/specs/add_note.spec.js'
+        '../test/specs/add-note-screen.spec.js'
     ],
 
     // Android capabilities

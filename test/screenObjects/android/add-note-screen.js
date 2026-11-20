@@ -25,7 +25,16 @@ class AddNoteScreen{
     get ViewNote(){
         return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/view_note"]');
     }
+    get FirstList(){
+        return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]');
+    }
 
+    get Options(){
+        return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/icon_nav"]');
+    }
+    get TrashCan(){
+        return $('//*[@text="Trash Can"]');
+    }
     async saveNote(){
 
         await driver.back();

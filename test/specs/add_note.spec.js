@@ -34,14 +34,7 @@ describe('Add Notes',()=>{
 
     it('Delete Note and Verify it in Thrash',async()=>{
 
-        //Steps to add a note
-        await $('//android.widget.Button[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/btn_start_skip"]').click()
-        await $('//*[@text="Add note"]').click();
-        await $('//*[@text="Text"]').click();
-        await expect($('//*[@text="Editing"]')).toBeDisplayed();
-        const noteTitle = await $('//android.widget.EditText[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_title"]')
-        await noteTitle.addValue('Fav anime list');
-        await driver.back();
+        
         await driver.back();
 
         //Tap on Note

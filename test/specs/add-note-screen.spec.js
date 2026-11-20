@@ -1,4 +1,5 @@
-import AddNoteScreen from './add-note-screen.js'
+import AddNoteScreen from '../screenObjects/android/add-note-screen.js'
+import DeleteNoteScreen from '../screenObjects/android/delete-note-screen.js'
 describe('Add Notes',()=>{
 
     it('Skip tutorial',async()=>{
@@ -27,34 +28,30 @@ describe('Add Notes',()=>{
 
     })
 
-    it.skip('Delete Note and Verify it in Thrash',async()=>{
+    it('Delete Note and Verify it in Thrash',async()=>{
 
-        //Steps to add a note
+        //Back to Home screen
         await AddNoteScreen.saveNote();
-        const noteTitle = await $('//android.widget.EditText[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_title"]')
-        await noteTitle.addValue('Fav anime list');
-        await driver.back();
-        await driver.back();
 
         //Tap on Note
-        await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]').click()
+        await AddNoteScreen.FirstList.click()
 
         //Tap on Options
-        await $('//android.widget.ImageButton[@content-desc="More"]').click();
+        await DeleteNoteScreen.MoreOption.click();
 
         //Tap on Delete
-        await $('//*[@text="Delete"]').click();
+        await DeleteNoteScreen.Delete.click();
         //Tap on OK in Alter window
-        await $('//*[@resource-id="android:id/button1"]').click();
+        await DeleteNoteScreen.OK.click();
 
         //Tap on Options - in Home screen
-        await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/icon_nav"]').click();
+        await AddNoteScreen.Options.click();
 
         //Tap on TrashCan
-        await $('//*[@text="Trash Can"]').click();
+        await AddNoteScreen.TrashCan.click();
 
         //Assertion
-        expect(await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]')).toHaveText('Fav anime list');
+        expect(await AddNoteScreen.FirstList).toHaveText('Fav anime list');
 
 
     })
